@@ -2,16 +2,24 @@ const mongoose = require('../config/mongodb');
 
 const productShema = mongoose.Schema({
     name: {
-        type: String
+        type: String,
+        required: [true, "El campo es obligatorio"],
     },
     price: {
-        type: Number
+        type: Number,
+        required: [true, "El campo es obligatorio"],
     },
-    currency: {
-        type: String
+    code: {
+        type: String,
+        required: [true, "El campo es obligatorio"],
     },
-    amount: {
-        type: Number
+    description: {
+        type: String,
+        required: [true, "El campo es obligatorio"],
+    },
+    category: {
+        type: String,
+        required: [true, "El campo es obligatorio"],
     }
 });
 
